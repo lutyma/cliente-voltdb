@@ -9,7 +9,7 @@ public class Cliente {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
+// se crea el client y se configura para conectar a la BD
 		org.voltdb.client.Client client = null;
 		ClientConfig config = null;
 		try {
@@ -30,6 +30,7 @@ public class Cliente {
         String VueloID = "";
 		VoltTable[] results = null;
 		
+	// con clientResponse se recibe los datos del procedimiento llamado.	
 		ClientResponse clientResponse = null;
 		try {
 			
@@ -46,6 +47,7 @@ public class Cliente {
 		
 		}
 	
+// con results recibimos la tabla tipo volttable retornada por el procedimiento y la iteramos para obtener los datos.		
 		results = clientResponse.getResults();
 		
 		
